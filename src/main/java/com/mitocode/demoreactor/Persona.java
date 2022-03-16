@@ -1,5 +1,7 @@
 package com.mitocode.demoreactor;
 
+import java.util.Objects;
+
 public class Persona {
     private String Nombre;
     private String Cedula;
@@ -45,5 +47,18 @@ public class Persona {
                 ", Cedula='" + Cedula + '\'' +
                 ", edad=" + edad +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Persona)) return false;
+        Persona persona = (Persona) o;
+        return getCedula().equals(persona.getCedula());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getCedula());
     }
 }

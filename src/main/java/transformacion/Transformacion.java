@@ -1,4 +1,4 @@
-package com.mitocode.demoreactor.transformacion;
+package transformacion;
 
 import com.mitocode.demoreactor.DemoReactorApplication;
 import com.mitocode.demoreactor.Persona;

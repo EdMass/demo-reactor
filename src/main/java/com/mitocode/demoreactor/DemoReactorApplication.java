@@ -1,7 +1,7 @@
 package com.mitocode.demoreactor;
 
-import com.mitocode.demoreactor.transformacion.Transformacion;
-import creacion.Creacion;
+import filtrado.Filtrado;
+import transformacion.Transformacion;
 import io.reactivex.Observable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -67,8 +67,11 @@ public class DemoReactorApplication implements CommandLineRunner {
 		//Creacion app = new Creacion();
 		//app.range();
 		//app.repeat();
-		Transformacion app2 = new Transformacion();
+		//Transformacion app2 = new Transformacion();
 		//app2.map();
-		app2.groupBy();
+		//app2.groupBy();
+		Filtrado app3 = new Filtrado();
+		//app3.filtrado();
+		app3.distinct();
 	}
 }
