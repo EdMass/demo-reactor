@@ -14,7 +14,7 @@ public class Creacion {
     private static final Logger log = LoggerFactory.getLogger(DemoReactorApplication.class);
 
     public void range(){
-        Flux.range(0,3)
+        Flux.range(0,5)
                 .doOnNext(i -> log.info("i : "+i))
                 .subscribe();
     }

@@ -32,7 +32,7 @@ public class Transformacion {
     public void groupBy(){
         List<Persona> personas = new ArrayList<>();
         personas.add(new Persona("Kandy", "3",34));
-        personas.add(new Persona("Nayive", "3",62));
+        personas.add(new Persona("Nayive", "2",62));
         personas.add(new Persona("Majo", "3",20));
 
         Flux.fromIterable(personas)

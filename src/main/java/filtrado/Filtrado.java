@@ -35,6 +35,7 @@ public class Filtrado {
         personas.add(new Persona("Nayive", "4",62));
         personas.add(new Persona("Majo", "5",20));
         personas.add(new Persona("Ramiro", "3",37));
+        personas.add(new Persona("Ramiro", "3",37));
 
         Flux.fromIterable(personas)
                 .distinct()
@@ -48,8 +49,11 @@ public class Filtrado {
         personas.add(new Persona("Majo", "5",20));
         personas.add(new Persona("Ramiro", "3",37));
 
+
         Flux.fromIterable(personas)
-                .take(2)
+                .take(3)
+                .takeLast(2)
+                .skip(1)
                 .subscribe(p -> log.info(p.toString()));
     }
 }

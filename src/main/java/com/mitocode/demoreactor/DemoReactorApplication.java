@@ -1,5 +1,7 @@
 package com.mitocode.demoreactor;
 
+import creacion.Creacion;
+import ejercicioClase.Ejercicio;
 import filtrado.Filtrado;
 import transformacion.Transformacion;
 import io.reactivex.Observable;
@@ -33,7 +35,10 @@ public class DemoReactorApplication implements CommandLineRunner {
 	}
 
 	public void mono(){
-		Mono.just(new Persona("Andres", "2",26)).subscribe(p -> log.info(p.toString()));
+
+		Mono.just(new Persona("Andres", "2",26))
+				.subscribe(p -> log.info(p.toString()));
+
 	}
 
 	public void flux(){
@@ -64,14 +69,26 @@ public class DemoReactorApplication implements CommandLineRunner {
 		//mono();
 		//flux();
 		//fluxmono();
+
 		//Creacion app = new Creacion();
 		//app.range();
 		//app.repeat();
+
 		//Transformacion app2 = new Transformacion();
 		//app2.map();
 		//app2.groupBy();
-		Filtrado app3 = new Filtrado();
+		
+		//Filtrado app3 = new Filtrado();
 		//app3.filtrado();
-		app3.distinct();
+		//app3.distinct();
+		//app3.take();
+
+		Ejercicio app4 = new Ejercicio();
+		//app4.merge();
+		//app4.empty();
+		//app4.filterYDistinct();
+		//app4.map();
+		app4.zipWith();
+
 	}
 }
